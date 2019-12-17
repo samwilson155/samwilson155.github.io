@@ -12,7 +12,7 @@ $(document).ready(function(){
           success: function (data, status){
             
             length = data.body.length
-            
+
             var languageList = [];
             var actionList = [];
             
@@ -48,7 +48,7 @@ $(document).ready(function(){
               
               retrieval2 = data.body[index].action.replace(/\"/g, "");
               retrieval1 = data.body[index].language.replace(/\"/g, "");
-              retrieval = data.body[index].code.replace(/\\"/g, "");
+              retrieval = data.body[index].code.replace(/\"/g, "");
               
               document.getElementById("button_" + index).innerHTML = "expand";
               document.getElementById("code_" + index).innerHTML = retrieval;
